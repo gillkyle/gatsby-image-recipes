@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import Layout from "../components/layout"
+import Layout from "../../components/layout"
 
 /*
   1. make sure folders are sourced (add folder to images called dogs)
@@ -10,7 +10,7 @@ import Layout from "../components/layout"
   3. loop through images
 */
 
-const ExamplePage = () => {
+export default () => {
   const allImagesQuery = graphql`
     query {
       allFile(
@@ -22,9 +22,12 @@ const ExamplePage = () => {
         edges {
           node {
             childImageSharp {
-              id
               fluid {
-                ...GatsbyImageSharpFluid
+                base64
+                aspectRatio
+                src
+                srcSet
+                sizes
               }
             }
           }
@@ -44,5 +47,3 @@ const ExamplePage = () => {
     </Layout>
   )
 }
-
-export default ExamplePage
