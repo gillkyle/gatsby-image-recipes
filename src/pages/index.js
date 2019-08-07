@@ -26,7 +26,7 @@ export default IndexPage
 
 export const query = graphql`
   query HomePageQuery {
-    allSitePage(filter: { path: { regex: "/examples/" } }) {
+    allSitePage(filter: { path: { regex: "/examples-after/" } }) {
       nodes {
         path
       }
