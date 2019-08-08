@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 
 const IndexPage = ({
   data: {
@@ -10,7 +9,6 @@ const IndexPage = ({
   },
 }) => (
   <Layout>
-    <SEO title="Home" />
     {pages.map((page, index) => {
       return (
         <>
@@ -26,7 +24,7 @@ export default IndexPage
 
 export const query = graphql`
   query HomePageQuery {
-    allSitePage(filter: { path: { regex: "/examples-after/" } }) {
+    allSitePage(filter: { path: { regex: "/examples/" } }) {
       nodes {
         path
       }
