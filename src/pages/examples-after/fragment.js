@@ -19,7 +19,10 @@ export default () => {
 
   return (
     <Layout>
-      <Img fluid={data.file.childImageSharp.fluid} />
+      <Img
+        fluid={data.file.childImageSharp.fluid}
+        alt="A corgi smiling happily"
+      />
     </Layout>
   )
 }

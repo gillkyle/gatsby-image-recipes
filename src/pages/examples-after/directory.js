@@ -21,6 +21,7 @@ export default () => {
       ) {
         edges {
           node {
+            base
             childImageSharp {
               fluid {
                 base64
@@ -42,7 +43,10 @@ export default () => {
   return (
     <Layout>
       {images.map(image => (
-        <Img fluid={image.node.childImageSharp.fluid} />
+        <Img
+          fluid={image.node.childImageSharp.fluid}
+          alt={image.node.base.split(".")[0]}
+        />
       ))}
     </Layout>
   )

@@ -29,7 +29,11 @@ export default () => {
 
   return (
     <Layout>
-      <Img style={{ maxWidth: 250 }} fixed={data.file.childImageSharp.fixed} />
+      <Img
+        style={{ maxWidth: 250 }}
+        fixed={data.file.childImageSharp.fixed}
+        alt="A corgi smiling happily"
+      />
     </Layout>
   )
 }

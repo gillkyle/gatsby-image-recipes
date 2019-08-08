@@ -6,7 +6,7 @@ import Layout from "../../components/layout"
 export default () => {
   return (
     <Layout>
-      <img src={Dog} />
+      <img src={Dog} alt="A corgi smiling happily" />
     </Layout>
   )
 }

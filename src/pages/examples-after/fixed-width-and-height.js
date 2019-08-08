@@ -23,7 +23,10 @@ export default () => {
 
   return (
     <Layout>
-      <Img fixed={data.file.childImageSharp.fixed} />
+      <Img
+        fixed={data.file.childImageSharp.fixed}
+        alt="A corgi smiling happily"
+      />
     </Layout>
   )
 }
